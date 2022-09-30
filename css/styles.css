@@ -79,6 +79,8 @@ a {
   fill: currentColor;
 }
 
+/* .header-nav-link.current::after { */
+
 .overlay-hero {
   max-width: 1600px;
   margin-right: auto;
@@ -109,6 +111,8 @@ a {
 }
 
 .link {
+  position: relative;
+
   color: currentColor;
   text-decoration: none;
 
@@ -121,6 +125,21 @@ a {
 .item-header .link:focus,
 .current-page {
   color: var(--main-blue);
+}
+
+.link.current-page::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+
+  display: inline-flex;
+  width: calc(100% + 2px);
+  height: 3px;
+
+  border-radius: 4px;
+  background-color: var(--main-blue);
 }
 
 .main-logo-link {
@@ -639,7 +658,7 @@ a {
 
 .social-media-list .link {
   transition-property: background-color;
-  transition-duration: 1250ms;
+  transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   border-radius: 50%;
 }
@@ -673,4 +692,78 @@ a {
 
 .social-media .icon-footer {
   fill: currentColor;
+}
+
+/* ------------- Modal window --------------*/
+
+/* ---------- початковий стан Backdrop-y ---------- */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(0, 0, 0, 0.3);
+
+  transition: opacity var(--anim-slow), visibility var(--anim-slow);
+
+  /* для наглядності властивості за змовчуванням */
+  opacity: 1;
+  visibility: visible;
+  pointer-events: initial;
+}
+
+/* кінцевий стан */
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+/* ---------- початковий стан Modal Window ---------- */
+.modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1) rotate(0);
+  opacity: 1;
+
+  width: 450px;
+  min-height: 550px;
+
+  background-color: var(--main-white);
+  border-radius: 4px;
+
+  transition: transform var(--anim-fast) 400ms, opacity var(--anim-fast) 400ms;
+}
+
+/* кінцевий стан */
+.backdrop.is-hidden .modal {
+  transform: translate(-50%, -50%) scale(0.3);
+  /* rotate(360deg); */
+  opacity: 0;
+}
+
+/* ---------- Close Button ---------- */
+.modal-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 35px;
+  height: 35px;
+  padding: 0;
+
+  background-color: var(--main-white);
+  border-radius: 50%;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+
+  cursor: pointer;
 }

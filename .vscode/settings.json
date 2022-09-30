@@ -35,5 +35,8 @@
   "editor.fontSize": 12,
   "liveServer.settings.donotVerifyTags": true,
   "debug.onTaskErrors": "debugAnyway",
-  "editor.formatOnSave": true
+  "editor.formatOnSave": true,
+  "[svg]": {
+    "editor.defaultFormatter": "jock.svg"
+  }
 }
