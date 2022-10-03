@@ -1,42 +1,18 @@
 {
-  "liveServer.settings.port": 5501,
-  "security.workspace.trust.banner": "never",
-  "security.workspace.trust.enabled": false,
-  "terminal.explorerKind": "external",
-  "emmet.includeLanguages": {
-    "javascript": "javascriptreact"
-  },
-  "quokka.showOutputOnStart": false,
-  "quokka.suppressExpirationNotifications": true,
-  "extensions.ignoreRecommendations": true,
-  "explorer.confirmDragAndDrop": false,
-  "liveServer.settings.donotShowInfoMsg": true,
-  "security.workspace.trust.untrustedFiles": "open",
-  "[html]": {
-    "editor.defaultFormatter": "vscode.html-language-features"
-  },
-  "explorer.confirmDelete": false,
-  "editor.tabSize": 2,
-  "git.autofetch": true,
-  "git.confirmSync": false,
-  "terminal.integrated.defaultProfile.windows": "Git Bash",
-  "explorer.excludeGitIgnore": true,
-  "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "eslint.format.enable": true,
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": true
-  },
-  "typescript.updateImportsOnFileMove.enabled": "always",
-  "javascript.updateImportsOnFileMove.enabled": "always",
-  "workbench.startupEditor": "none",
-  "editor.formatOnPaste": true,
-  "javascript.preferences.quoteStyle": "single",
-  "typescript.preferences.quoteStyle": "single",
-  "editor.fontSize": 12,
-  "liveServer.settings.donotVerifyTags": true,
-  "debug.onTaskErrors": "debugAnyway",
-  "editor.formatOnSave": true,
-  "[svg]": {
-    "editor.defaultFormatter": "jock.svg"
-  }
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/css"
+    },
+    {
+      "format": "compressed",
+      "extensionName": ".min.css",
+      "savePath": "/css"
+    }
+  ],
+  "liveSassCompile.settings.excludeList": ["/**/node_modules/**", "/.vscode/**"],
+  "liveSassCompile.settings.generateMap": true,
+  "liveSassCompile.settings.autoprefix": ["> 1%", "last 2 versions"],
+  "liveServer.settings.port": 5501
 }
