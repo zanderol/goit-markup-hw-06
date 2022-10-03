@@ -62,9 +62,9 @@
           Ефективні рішення для <br />
           вашого бізнесу
         </h1>
-        <button type="button" class="hero-button" data-modal-open>Замовити послугу</button>
+        <button type="button" class="main-button" data-modal-open>Замовити послугу</button>
       </section>
-      <!-------------------------- description -------------------------->
+      <!-------------------------- Features -------------------------->
       <section class="description section">
         <div class="container">
           <h2 class="visually-hidden">Description</h2>
@@ -371,7 +371,7 @@
         </div>
         <div class="social-media">
           <!----------------- Footer Social Media ----------------->
-          <h3>Приєднуйтесь</h3>
+          <h2 class="footer-title">Приєднуйтесь</h2>
           <ul class="social-media-list">
             <li class="link icon">
               <a class="link-footer" href="#">
@@ -404,18 +404,25 @@
           </ul>
         </div>
         <!---------- Subscribe ---------->
-        <div class="subscribe social-media">
-          <form action="">
-            <h3>Підпишіться на розсилку</h3>
-            <label for="email"></label>
-            <input type="email" name="email" id="email" placeholder="E-mail" />
+        <div class="subscribe">
+          <h2 class="footer-title">Підпишіться на розсилку</h2>
+          <form class="subscribe-form">
+            <label for="email">
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="E-mail"
+                class="subscribe-field"
+              />
+            </label>
+            <button class="subscribe-btn main-button" type="submit">
+              Підписатися
+              <svg class="icon-footer" width="24" height="24">
+                <use href="./images/icons.svg#subscribe"></use>
+              </svg>
+            </button>
           </form>
-          <button class="subscribe-btn hero-button" type="submit">
-            Підписатися
-            <svg class="icon-footer" width="24" height="24">
-              <use href="./images/icons.svg#subscribe"></use>
-            </svg>
-          </button>
         </div>
       </div>
     </footer>
@@ -428,7 +435,7 @@
             <use href="./images/icons.svg#icon-close-tag-x"></use>
           </svg>
         </button>
-        <h2 class="modal-header">Залиште свої дані, ми вам передзвонимо</h2>
+        <strong class="modal-header">Залиште свої дані, ми вам передзвонимо</strong>
         <!-- Form -->
         <form action="" class="js-speaker-form">
           <ul class="modal-form-list">
@@ -460,40 +467,33 @@
             <!-- Comments -->
             <li class="modal-form-item">
               <label for="comments" class="">Коментар</label>
-              <textarea
-                name="comments"
-                id="comments"
-                rows="10"
-                placeholder="Введіть текст"
-              ></textarea>
+              <textarea name="comments" id="comments" placeholder="Введіть текст"></textarea>
             </li>
           </ul>
           <!-- Check Box -->
-          <p class="modal-checkbox">
-            <label for="policy">
-              <input
-                type="checkbox"
-                name="policy"
-                value="policy"
-                id="policy"
-                class="agreement-checkbox visually-hidden"
-              />
-              <svg class="checkbox-icon" width="16" height="15">
-                <use
-                  class="checkbox-icon-unchecked"
-                  href="./images/icons.svg#icon-checkbox-unchecked"
-                ></use>
-                <use
-                  class="checkbox-icon-checked"
-                  href="./images/icons.svg#icon-checkbox-checked"
-                ></use>
-              </svg>
-              Погоджуюсь з розсилкою та приймаю <a class="link" href="#">Умови договору</a>
-            </label>
-          </p>
+          <label class="modal-checkbox">
+            <input
+              type="checkbox"
+              name="policy"
+              value="policy"
+              class="agreement-checkbox visually-hidden"
+            />
+            <svg class="checkbox-icon" width="16" height="15">
+              <use
+                class="checkbox-icon-unchecked"
+                href="./images/icons.svg#icon-checkbox-unchecked"
+              ></use>
+              <use
+                class="checkbox-icon-checked"
+                href="./images/icons.svg#icon-checkbox-checked"
+              ></use>
+            </svg>
+            Погоджуюсь з розсилкою та приймаю
+            <a class="modal-checkbox-link" href="#">Умови договору</a>
+          </label>
           <!-- Submit Button -->
 
-          <button class="modal-submit-btn hero-button" type="submit">Відправити</button>
+          <button class="modal-submit-btn main-button" type="submit">Відправити</button>
         </form>
       </div>
     </div>
